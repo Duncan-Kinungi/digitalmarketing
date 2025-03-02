@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8c680a0ee1.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+    integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+  <link rel="shortcut icon" href="assets/images/favicon1.jpg" type="image/x-icon">
+  <title>Experienced Marketers</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/scroltotop.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
+  <script src="assets/js/email.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("3x-AvIXm9TDcLIb-1");
+    })();
+  </script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+integrity="sha384-KyZXEJp3Y2jQ5R78l7Z97rAChisET5V9fN9V55JH1h0h6e4e1QkQ79wz6TtD3iJl5" crossorigin="anonymous">
+
+  <!--
+
+TemplateMo 568 DigiMedia
+
+https://templatemo.com/tm-568-digimedia
+
+-->
+  <style>
+    /* Set the width and height of the scrollbar */
+    ::-webkit-scrollbar {
+      /* cursor: grab; */
+      width: 10px;
+      height: 10px;
+    }
+
+    /* Set the background color of the scrollbar track */
+    ::-webkit-scrollbar-track {
+      background-color: #f5f5f5;
+    }
+
+    /* Set the color and style of the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to right, #ffbd84 0%, #ff1f8e 100%);
+      border-radius: 10px;
+      border: 2px solid #f5f5f5;
+    }
+
+    /* Set the hover effect of the scrollbar thumb */
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to right, #ff1f8e 0%, #ffbd84 100%);
+    }
+
+    * {
+      cursor: none;
+    }
+
+    .outline {
+      width: 34px;
+      height: 34px;
+      mix-blend-mode: difference;
+      border-radius: 100%;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      position: fixed;
+      pointer-events: none;
+      left: 0px;
+      top: 0px;
+      background: #000;
+      z-index: 999999;
+      transform: translate(-64px, -64px);
+      border: 1px solid #00855A;
+    }
+
+    .outline.hover {
+      width: 60px;
+      height: 60px;
+      /* background: #48a192; */
+      background: linear-gradient(to left, #01CB81, #003F34);
+      /* background: transparent; */
+      border: none;
+    }
+
+    .cursor {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: linear-gradient(to right, #ffbd84 0%, #ff1f8e 100%);
+      opacity: .8;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      pointer-events: none;
+      z-index: 999999;
+      transform: translate(50vw, -100px);
+    }
+
+
+
+    .outline.hover::after {
+      content: '';
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      height: 100%;
+      /* background-image: url('https://alien.haldenvgs.net/images/cursor.svg'); */
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .cursor.hover {
+      opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+
+      .cursor,
+      .outline {
+        display: none;
+      }
+
+    }
+
+    /* heloooo */
+    #chatIcon {
+      position: fixed;
+      bottom: 100px;
+      right: 22px;
+      font-size: 50px;
+      z-index: 9999999;
+      transition: transform 0.2s;
+    }
+
+    /* Chat Icon Hover Animation */
+    #chatIcon:hover {
+      transform: scale(1.1);
+    }
+
+    .chat-sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 400px;
+      background: white;
+      box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+      transition: right 0.3s ease;
+      z-index: 100000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .chat-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close {
+      position: absolute;
+      top: 23px;
+      right: 10px;
+      font-size: 41px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .close:hover {
+      color: aliceblue;
+    }
+
+    /* Animation for Opening */
+    .chat-sidebar.open {
+      right: 0;
+    }
+
+    /* Mobile Responsive Design */
+    @media (max-width: 768px) {
+      .chat-sidebar {
+        width: 100%;
+      }
+    }
+
+    .hide-icon {
+      display: none;
+    }
+    
+
+
+    /* heloooo */
+  </style>
+</head>
+
+<body>
+  <a href="javascript:void(0)" title="Chat With Us" id="chatIcon">
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M8.5 12.5C8.5 12.5 9.8125 14 12 14C14.1875 14 15.5 12.5 15.5 12.5M14.75 7.5H14.76M9.25 7.5H9.26M7 18V20.3355C7 20.8684 7 21.1348 7.10923 21.2716C7.20422 21.3906 7.34827 21.4599 7.50054 21.4597C7.67563 21.4595 7.88367 21.2931 8.29976 20.9602L10.6852 19.0518C11.1725 18.662 11.4162 18.4671 11.6875 18.3285C11.9282 18.2055 12.1844 18.1156 12.4492 18.0613C12.7477 18 13.0597 18 13.6837 18H16.2C17.8802 18 18.7202 18 19.362 17.673C19.9265 17.3854 20.3854 16.9265 20.673 16.362C21 15.7202 21 14.8802 21 13.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V14C3 14.93 3 15.395 3.10222 15.7765C3.37962 16.8117 4.18827 17.6204 5.22354 17.8978C5.60504 18 6.07003 18 7 18ZM15.25 7.5C15.25 7.77614 15.0261 8 14.75 8C14.4739 8 14.25 7.77614 14.25 7.5C14.25 7.22386 14.4739 7 14.75 7C15.0261 7 15.25 7.22386 15.25 7.5ZM9.75 7.5C9.75 7.77614 9.52614 8 9.25 8C8.97386 8 8.75 7.77614 8.75 7.5C8.75 7.22386 8.97386 7 9.25 7C9.52614 7 9.75 7.22386 9.75 7.5Z"
+          stroke="#050578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+    </svg>
+  </a>
+
+  <div id="chatSidebar" class="chat-sidebar">
+    <span class="close">&times;</span>
+    <iframe src="./html1/index1.html" title="Chatbot Window" class="chat-frame"></iframe>
+  </div>
+
+  <script>
+    document.getElementById('chatIcon').addEventListener('click', function () {
+      document.getElementById('chatSidebar').classList.add('open');
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+      document.getElementById('chatSidebar').classList.remove('open');
+    });
+
+    document.getElementById('chatIcon').addEventListener('click', function () {
+      document.getElementById('chatSidebar').classList.add('open');
+      document.getElementById('chatIcon').classList.add('hide-icon');
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+      document.getElementById('chatSidebar').classList.remove('open');
+      document.getElementById('chatIcon').classList.remove('hide-icon');
+    });
+
+  </script>
+
+  <!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <div class="cursor"></div>
+  <div class="outline"></div>
+  <!-- [[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+
+  <div id="progress">
+    <span id="progress-value"> <a> <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+          viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+        </svg></a></span>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="#top" class="logo" ondragstart="return false;">
+              <img src="assets/images/logo-1.png" alt="" style="width:210px">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
+              <li class="scroll-to-section"><a href="#blog">Blog</a></li>
+              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <li class="scroll-to-section">
+                <div id="whatsapp" class="border-first-button">
+                  <a href="https://wa.me/254702680434" target="_blank" aria-label="Chat with us on WhatsApp">
+                      <i class="fab fa-whatsapp"></i>
+                  </a>
+              </div>
+              
+              
+              </li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h6>Welcome to experienced Marketers.</h6>
+                    <h2>Driving Success with Innovative Digital Solutions.</h2>
+                    <p>Welcome to Experienced Marketers, your gateway to success in the digital realm. As a comprehensive
+                       digital marketing agency, we specialize in empowering businesses to excel and reach their 
+                       objectives in today’s fast-evolving online environment. Through creative strategies and 
+                       advanced solutions, we help our clients establish a robust online presence, engage 
+                       effectively with their audience, and achieve meaningful outcomes.
+                    </p>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="border-first-button scroll-to-section">
+                      <a href="#contact">Free Quote</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <!-- <img
+                  src="https://img.freepik.com/free-vector/hand-drawn-illustration-people-with-smartphone-marketing_52683-66659.jpg?w=996&t=st=1683736386~exp=1683736986~hmac=fe54d53e07ed93e7eb5e391d43d40ffda7071436fb2241967a0e260494bb4da8"
+                  alt=""> -->
+                <img ondragstart="return false;" class="Home_svg" src="assets/images/Marketing_intro.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="about" class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img ondragstart="return false;" src="assets/images/about-us.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="about-right-content">
+                <div class="section-heading">
+                  <h6>About Us</h6>
+                  <h4>Who are Experienced <em>Marketers</em></h4>
+                  <div class="line-dec"></div>
+                </div>
+                <p>Welcome to Experienced Marketers, your trusted partner for innovative digital marketing solutions. 
+                  With a passion for fostering growth and a steadfast dedication to excellence, we are committed to 
+                  helping businesses thrive in the ever-changing digital landscape. At Experienced Marketers, 
+                  we believe every brand has a unique story, and we’re here to help you bring that story to life. 
+                  Our team of seasoned professionals develops customized strategies and harnesses cutting-edge digital 
+                  tools and technologies to achieve outstanding results.</p>
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="100">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            100%<br>
+                            <span style="line-height:2px;color:black">Generate Quality<br>Leads </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="100">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            100%<br>
+                            <span style="line-height:2px;color:black">Boost <br> Revenue</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="100">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            100%<br>
+                            <span style="line-height: 2px;color:black">Customer <br> Satisfaction</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Our Services</h6>
+            <h4>What Our Agency <em>Provides</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <a>
+                      <div class="first-thumb active">
+                        <div class="thumb" data-tilt>
+                          <span class="icon"><img ondragstart="return false;"
+                              src="assets/images/social-media.png" alt="social media "></span>
+                          <p style="color: #000!important;" class="photo">Social Media Marketing</p>
+                        </div>
+                      </div>
+                    </a>
+
+
+                    <div><a>
+                        <div class="thumb" data-tilt>
+                          <span class="icon"><img ondragstart="return false;"
+                              src="assets/images/content-creation.png" alt="content creation"></span>
+                          <p style="color: #000!important;" class="photo">Content Creation</p>
+                        </div>
+                      </a>
+                    </div>
+
+
+                    <div><a>
+                        <div class="thumb" data-tilt>
+                          <span class="icon"><img ondragstart="return false;"
+                              src="assets/images/graphic-design.png"
+                              alt="Graphics Design"></span>
+                          <p style="color: #000 !important;" class="photo">Graphic Design</p>
+                        </div>
+                      </a>
+                    </div>
+
+
+                    <div> <a>
+                        <div class="thumb" data-tilt>
+                          <span class="icon"><img ondragstart="return false;"
+                              src="assets/images/Directing.png"
+                              alt="Directing"></span>
+                          <p style="color: #000!important;" class="photo">Creative Directing</p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="last-thumb"> <a>
+                        <div class="thumb" data-tilt>
+                          <span class="icon"><img ondragstart="return false;"
+                              src="assets/images/Digital-Marketing.png"
+                              alt="Digital Marketing"></span>
+                          <p style="color: #000 !important;" class="photo">Digital Marketing</p>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <p class="heading_service" style="color: #050748!important;">Social Media Marketing</p>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Master the Art of Social Media Success.</h4>
+                                <p>Our social media marketing solutions empower your business to establish a compelling
+                                   online presence, engage with your audience, boost website traffic, 
+                                  capture leads, and accomplish your goals.
+
+                                  We specialize in:
+                                </p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Facebook Advertising</span>
+                                  <span><i class="fa fa-check"></i> Instagram Advertising</span><span><i
+                                      class="fa fa-check"></i> Pinterest Marketing
+                                  </span>
+                                  <span><i class="fa fa-check"></i> Linkedin Marketing</span> <span><i
+                                      class="fa fa-check"></i> Twitter Marketing</span>
+                                </div>
+                                <p><strong style="font-weight: 500;color: #000 !important;">Reach out today to start your journey to
+                                   online excellence!</strong> Let us help you craft a winning social media strategy tailored to your 
+                                   unique brand and objectives.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img ondragstart="return false;" class="SMM" src="assets/images/Social_media.png" alt="">
+                              </div>
+                            </div>
+                            <!-- <button id="openFormButton">Open Form</button> -->
+                          </div>
+                          <!-- ============================================================== 
+                          <button id="openFormButton">Contact Us</button>
+                          <div id="popupContainer" class="popup-container" style="z-index:99999;">
+                            <div id="popupForm" class="popup-form">
+
+                              <form action="https://formspree.io/f/mqkojpkz" id="myFormContent" method="POST" >
+                                <h2>Grab Our Best Digital Marketing Services</h2>
+                                <label for="name">Name:</label>
+                                <input type="Text" id="name" name="name" required>
+
+                                <label for="Number">Mobile No:</label>
+                                NOT IN============= <input type="Number" id="Number" name="Number" min="0" max="9999999999" maxlength="10" required> 
+                                <input type="Number" id="Number" name="Number" pattern="/^-?\d+\.?\d*$/"
+                                  onKeyPress="if(this.value.length==10) return false;" required />
+
+                                <label for="category">Which Type Of Services You Want? : </label>
+                                <select id="category" name="category" required>
+                                  <option value="Social Media Marketing">Social Media Marketing</option>
+                                  <option value="SEO">SEO</option>
+                                  <option value="Graphic Design">Graphic Design</option>
+                                  <option value="Website Design">Website Design</option>
+                                  <option value="Website Development">Website Development</option>
+                                </select>
+
+                                <label for="message">List Down Your Required Services : </label>
+                                <textarea id="message" name="message" required></textarea>
+
+                                <div class="button-container">
+                                  <button type="submit">Submit</button>
+                                  <button type="button" id="cancelButton">Cancel</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                           ================================================================ -->
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <p style="color: #050748 !important;" id="heading_service">Content Creation</p>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Unleash the Power of Exceptional Content</h4>
+                                <p>Our content creation services are designed to captivate your audience, elevate your brand, 
+                                  and drive meaningful engagement. From compelling visuals to impactful storytelling, we help 
+                                  you communicate your message effectively and stand out in the digital landscape.
+
+                                  We offer:
+                                </p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Blog Writing
+                                    </span>
+                                  <span><i class="fa fa-check"></i> Social Media Posts</span> <span><i
+                                      class="fa fa-check"></i>
+                                    Video Production</span>
+                                  <span><i class="fa fa-check"></i> Product Descriptions </span> <span><i
+                                      class="fa fa-check"></i>
+                                    Caption for Social Media</span> <span><i class="fa fa-check"></i> Script writing for Videos
+                                    </span>
+                                </div>
+                                <p> <strong style="font-weight: 500;color: #000;">Contact us today to bring your vision to life!</strong> Let’s create content that inspires, 
+                                  informs, and converts.
+                                  
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img ondragstart="return false;" src="assets/images/Content creator.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <p style="color: #050748 !important;" class="heading_service">Graphic Design</p>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Transform Your Brand with Stunning Graphic Design</h4>
+                                <p>We specialize in turning your ideas into visually compelling designs.
+                                   Our passionate team of designers is committed to delivering exceptional 
+                                   graphic design services that elevate your brand and leave a memorable impact. 
+                                   Whether it's crafting a logo, designing marketing materials, or enhancing your
+                                    online presence, we create visuals that speak to your audience.
+
+                                  Our services include:</p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Flyer Design</span>
+                                  <span><i class="fa fa-check"></i> Logo Design</span> <span><i
+                                      class="fa fa-check"></i>
+                                    Business Cards</span>
+                                  <span><i class="fa fa-check"></i> Leaflets</span> <span><i
+                                      class="fa fa-check"></i>
+                                    Social Media Posts</span> <span><i class="fa fa-check"></i> Company Profiles
+                                    </span>
+                                </div>
+                                <p>Whether you're a startup building your brand or an established business in need of a redesign, 
+                                  we’re here to bring your vision to life.
+                                  <strong style="font-weight: 500;color: #000;">Contact us today to get started!</strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img ondragstart="return false;" src="assets/images/Graphics-1.png" alt="Graphics">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+
+                        <div class="thumb">
+                          <div class="row">
+                            <p style="color: #050748 !important;" class="heading_service">Creative Directing</p>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Unleash Your Brand's Full Potential with Expert Creative Direction</h4>
+                                <p>Our creative direction services are designed to bring clarity, focus, and innovation 
+                                  to your brand. From concept to execution, we guide every visual and strategic decision 
+                                  to ensure a cohesive and impactful brand identity. With our expertise, we transform your
+                                   ideas into a compelling story that resonates with your target audience.
+
+                                  Our services include:</p>
+                                <div class="ticks-list">
+                                  <span><i class="fa fa-check"></i> Brand Strategy Development</span>
+                                  <span><i class="fa fa-check"></i> Visual Storytelling</span>
+                                  <span><i class="fa fa-check"></i> Campaign Direction</span>
+                                  <span><i class="fa fa-check"></i> Art Direction for Photo & Video Shoots</span>
+                                  <span><i class="fa fa-check"></i>Conceptualizing and Executing Marketing Strategies</span>
+                                  <span><i class="fa fa-check"></i> Branding & Positioning</span>
+
+
+                                </div>
+                                <p> <strong style="font-weight: 500;color: #000;">Let’s work together to craft a powerful brand story!</strong> Whether you're launching a new product or looking
+                                   to refresh your brand, we provide the creative leadership to elevate your business.
+                                  
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img ondragstart="return false;" src="assets/images/Creative-Directing.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <p style="color: #050748 !important;" class="heading_service">Digital Marketing</p>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Drive Growth with Powerful Digital Marketing Strategies</h4>
+                                <p>Our digital marketing services are designed to help your brand reach new heights by connecting 
+                                  with your audience across digital platforms. From search engine optimization to social media 
+                                  advertising, we create customized strategies that drive traffic, generate leads, and maximize 
+                                  your ROI. </p>
+                                <div class="ticks-list"><span><i class="fa fa-check"></i> Search Engine Optimization (SEO)
+                                    </span>
+                                  <span><i class="fa fa-check"></i> Pay-Per-Click Advertising (PPC)</span> <span><i
+                                      class="fa fa-check"></i>
+                                    Social Media Marketing</span>
+                                  <span><i class="fa fa-check"></i> Content Marketing</span> <span><i
+                                      class="fa fa-check"></i>
+                                    Email Marketing Campaigns</span> <span><i class="fa fa-check"></i> Online Reputation Management
+                                    </span> <br>
+                                  <span><i class="fa fa-check"></i> Influencer Marketing</span>
+
+                                </div>
+                                <p>Whether you're looking to improve your visibility, increase conversions, or build lasting relationships
+                                   with your audience, we have the tools and expertise to help you succeed. <strong style="font-weight: 500;color: #000;">Contact us today to grow 
+                                    your brand in the digital world!</strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img ondragstart="return false;" src="assets/images/Digital -Marketing1.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <button style="color:#fa65b1;" onmouseover="this.style.color='white';" onmouseout="this.style.color='#1367e4';"
+    id="openFormButton" > <a>Contact Us</a></button>
+  <div id="popupContainer" class="popup-container" style="z-index:99999;">
+    <div id="popupForm" class="popup-form">
+
+      <!-- <form action="https://formspree.io/f/mqkojpkz" id="myFormContent" method="POST"> -->
+
+      <!-- <form id="myFormContent" method="POST"> -->
+      <h2 id="form-h2">Grab Our Best Digital Marketing Services</h2>
+      <ul>
+        <li><b>Email:</b><span style="color: #1367e4;"> lawrencekogembo@gmail.com</span> </li>
+        <li><b>Phone:</b><span style="color: #1367e4;"> +254-702-680-434</span> </li>
+        <li><b>Address:</b><span style="color: #1367e4;"> Nairobi, Kenya</span> </li>
+    </ul>
+      <div class="button-container">
+        <button style="color: black;" type="cancel" id="cancelButton"><a>Cancel</a></button>
+      </div>
+      <!-- </form> -->
+    </div>
+  </div>
+  <!-- ======================================================================================== -->
+  <!-- ================================================================ -->
+
+
+  <!-- 
+  <div id="free-quote" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Get Your Free Quote</h6>
+            <h4>Grow With Us Now</h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+          <form  id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="web" name="web" class="website" placeholder="Your website URL..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <fieldset>
+                  <button type="submit" class="main-button">Get Quote Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ -->
+  <div id="portfolio" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Our Portofolio</h6>
+            <h4>See Our Recent <em>Projects</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="loop owl-carousel">
+            <div class="item">
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <!-- <img ondragstart="return false;" src="assets/images/portfolio-01.jpg" alt=""> -->
+                  <img ondragstart="return false;" src="assets/images/Pro-1.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Dare 2 Taste Kenya</h4>
+                  <span style="color: rgb(106, 106, 142);">Social Media Marketing & <br>Graphic Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <img ondragstart="return false;" src="assets/images/pro-2.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Omnitrade Networks</h4>
+                  <span style="color: rgb(106, 106, 142);">Social Media Marketing &<br>Graphic Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <img ondragstart="return false;" src="assets/images/pro-3.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Creative Hippie Brand</h4>
+                  <span style="color: rgb(106, 106, 142);">Graphic Design &<br>Social Media Marketing</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <img ondragstart="return false;" src="assets/images/pro-4.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>PMG Fleets</h4>
+                  <span style="color: rgb(106, 106, 142);">Social Media Marketing &<br>Digital Marketing</span>
+                </div>
+              </div>
+            </div>
+            
+           
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================ALL_PROJECTS_BLOG ======================================= -->
+  <!-- <div id="blog" class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="section-heading">
+            <h6>Recent News</h6>
+            <h4>Check Our Blog <em>Posts</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-post">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/blog-post-01.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">SEO Analysis</span>
+              <span class="date">03 August 2021</span>
+              <a href="#">
+                <h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adelore
+                  Eiusmod Tempor Incididunt</h4>
+              </a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor incididunt
+                ut labore.</p>
+              <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
+              <div class="border-first-button"><a href="#">Discover More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-posts">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="#"><img src="assets/images/blog-post-02.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#">
+                      <h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="#"><img src="assets/images/blog-post-03.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#">
+                      <h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="post-item last-post-item">
+                  <div class="thumb">
+                    <a href="#"><img src="assets/images/blog-post-04.jpg" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">SEO Analysis</span>
+                    <span class="date">24 September 2021</span>
+                    <a href="#">
+                      <h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Contact Us</h6>
+            <h4>Get In Touch With Us <em>Now</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form action="https://formspree.io/f/xbjebkdz" id="contact" method="POST">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="contact-dec">
+                  <img ondragstart="return false;" src="assets/images/contact-dec.png" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div id="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29382.749203494128!2d72.58373700710186!3d22.99277616945301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85c2e335ed6b%3A0xd19a77c6688f5c9b!2sManinagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1684068623697!5m2!1sen!2sin"
+                    width="100%" height="636px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img ondragstart="return false;" src="assets/images/phone-icon.png" alt="">
+                          <a href="tel:+918849248550" target="_blank">+91 6358936987</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img ondragstart="return false;"
+                            src="https://cdn-icons-png.flaticon.com/128/10707/10707412.png" alt="">
+                          <a href="mailto:bhdigitalsolutions172@gmail.com" target="_blank">bhdigitalsolutions172 <br>
+                            @gmail.com</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img ondragstart="return false;" src="assets/images/location-icon.png" alt="">
+                          <a href="https://goo.gl/maps/eDmnnx3bXhtmE4vLA?coh=178572&entry=tt"
+                            target="_blank">Ahmedabad</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                      </fieldset>
+                      <fieldset>
+                        <input type="text" name="Email" id="Number" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                          required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
+                          required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <a>
+                        <fieldset>
+                          <button style="color:#fa65b1;" onmouseover="this.style.color='white';"
+                            onmouseout="this.style.color='#fa65b1';" type="submit" id="form-submit"
+                            class="main-button">Send Message Now</button>
+                        </fieldset>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+
+  <!-- <div class="contact_us_6">
+    <div class="responsive-container-block container">
+      <form action="https://formspree.io/f/xbjebkdz" method="POST" class="form-box">
+        <div class="container-block form-wrapper">
+          <div class="mob-text">
+            <p class="text-blk contactus-head">
+              Get in Touch
+            </p>
+            <p class="text-blk contactus-subhead">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien. lorem
+            </p>
+          </div>
+          <div class="responsive-container-block" id="i2cbk">
+            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
+              <p class="text-blk input-title">
+               First Name : 
+              </p>
+              <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name..." required>
+            </div>
+            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
+              <p class="text-blk input-title">
+              Email :
+              </p>
+              <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email..." required>
+            </div>
+            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
+              <p class="text-blk input-title">
+                Phone number :
+              </p>
+              
+              <input class="input" id="imgis-3" type="Number" name="PhoneNumber" pattern="/^-?\d+\.?\d*$/" placeholder="Please enter phone number..." onKeyPress="if(this.value.length==10) return false;" required>
+
+
+            </div>
+            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
+              <p class="text-blk input-title">
+                What do you have in mind?:
+              </p>
+              <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..." required></textarea>
+            </div>
+          </div>
+          <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
+        <div class="map-part">
+          <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
+            Reach us at
+          </p>
+          <p class="text-blk map-contactus-subhead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien.
+          </p>
+          <div class="social-media-links mob">
+            <a class="social-icon-link" href="#" id="itixd">
+              <img class="link-img image-block" src="https://img.freepik.com/free-icon/facebook_318-566730.jpg">
+            </a>
+            <a class="social-icon-link" href="#" id="izldf-2-2">
+              <img class="link-img image-block" src="https://i.pinimg.com/originals/72/9f/77/729f7798561be2cb67f39e916a22eb6a.png">
+            </a>
+          </div>
+           <div class="map-box container-block"> 
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29382.749203494128!2d72.58373700710186!3d22.99277616945301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85c2e335ed6b%3A0xd19a77c6688f5c9b!2sManinagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1684068623697!5m2!1sen!2sin"
+                    width="100%" height="636px" class="map-box container-block" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+  <!-- <footer>
+    <div id="sc-div">
+      <a href="#" class="icon-fb">
+        <i style="font-size: 50px;" class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a href="" class="icon-lnk">
+        <i style="font-size: 50px;" class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="icon-wp">
+        <i style="font-size: 50px;" class="fa-brands fa-square-whatsapp"></i>
+      </a>
+
+      <a href="mailto:example@example.com" target="_blank" rel="noopener noreferrer" class="icon-mail">
+        <i style="font-size: 50px;" class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 BH Digital Solutions, Ltd. All Rights Reserved.
+            <br><a href="https://bhdigitalsolutions.carrd.co/" target="_blank">@bhdigitalsolutions</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+
+
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span style="color: rgb(106, 106, 142);">Nairobi, Kenya</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span><a style="color: #6a6a8e;" href="tel:+254702680434">+254 702 680 434</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span><a style="color: #6a6a8e;"
+                    href="lawrencekogembo@gmail.com">lawrencekogembo@gmail.com</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="assets/images/logo-1.png" class="img-fluid" alt="logo"></a>
+              </div>
+              <div class="footer-text">
+                <p>We provide a wide array of digital marketing services, including social media marketing, 
+                  Instagram ads, Facebook ads, content creation, creative direction, graphic design, and more.
+                  
+                  </p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a style="color: #050748;" href="https://www.facebook.com/Experiencedmarketers" class="m-0 mr-2"
+                  target="_blank"><i class="fab fa-facebook"></i></a>
+                <a style="color: #050748;" href="https://www.linkedin.com/in/lawrence-kogembo-20908a10b/"
+                  class="m-0 mr-2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a style="color: #050748;" href="https://www.instagram.com/larry_matinde/?hl=en" class="m-0 mr-2"
+                  target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a style="color: #050748;" href="https://wa.me/254702680434" target="_blank" aria-label="Chat with us on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a style="color: #6a6a8e;"><a href="#about">About</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a style="color: #6a6a8e;"><a href="#portfolio">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a style="color: #6a6a8e;"><a href="#about">About us</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a style="color: #6a6a8e;"><a href="#Blog">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--                     <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Subscribe</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                      </div>
+                      <div class="subscribe-form">
+                          <form action="#">
+                              <input type="text" placeholder="Email Address">
+                              <button><i class="fab fa-telegram-plane"></i></button>
+                          </form>
+                      </div>
+                  </div>
+              </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text" style="align-items: left;">
+              <p>
+                Copyright &copy; <span id="currentYear"></span>, All Rights Reserved 
+                <a target="_blank" href="https://experiencedmarketers.com">
+                    <br>Experienced Marketers
+                </a>
+            </p>
+            
+            <script>
+                // Get the current year and update the element with id "currentYear"
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+            
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a style="color:#878787"><a href="#top">Home</a></li>
+                <li><a style="color:#878787"><a href="#about">About Us</a></li>
+                <li><a style="color:#878787">Blog</a></li>
+                <li><a style="color:#878787"><a href="#services">Services</a></li>
+                <li><a style="color:#878787"><a href="#portfolio">Projects</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+  <!-- =============================[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] -->
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/tilt.jquery.js"></script>
+  <!-- <script src="assets/js/inspect.js"></script> -->
+
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <!--start tilt efftc script -->
+  <script>$(document).ready(function () {
+      $('.thumb').tilt({
+        maxTilt: 0,
+        scale: 1.2,
+        speed: 300,
+      })
+    })</script>
+  <!-- end tilt efftc script -->
+
+
+  <script>
+    setTimeout(function () {
+      document.querySelector('.popup').style.display = 'block';
+      document.querySelector('.popup').style.right = '20px';
+    }, 5000);
+  </script>
+
+  <!-- JavaScript to hide the popup when the close button is clicked -->
+  <script>
+    document.querySelector('.close').addEventListener('click', function () {
+      document.querySelector('.popup').style.display = 'none';
+    });
+  </script>
+
+  <!-- JavaScript to hide the popup after 5 seconds -->
+  <script>
+    setTimeout(function () {
+      document.querySelector('.popup').style.display = 'none';
+    }, 15000);
+  </script>
+
+  <script>
+
+    // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{:::::::::::::::}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+
+
+    // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+
+
+    // window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+
+    // const openFormButton = document.getElementById("openFormButton");
+    // const popupContainer = document.getElementById("popupContainer");
+    // const popupForm = document.getElementById("popupForm");
+    // const cancelButton = document.getElementById("cancelButton");
+
+    // openFormButton.addEventListener("click", function () {
+    //   popupContainer.style.display = "flex";
+    //   popupForm.style.display = "block";
+    // });
+
+    // cancelButton.addEventListener("click", function () {
+    //   popupContainer.style.display = "none";
+    //   popupForm.style.display = "none";
+    // });
+
+    // document.getElementById("myFormContent").addEventListener("submit", function (event) {
+    //   event.preventDefault();
+
+    //   // const formData = new FormData(event.target);
+    //   // const name = formData.get("name");
+    //   // const Number = formData.get("Number");
+    //   // const category = formData.get("category");
+    //   // const message = formData.get("message");
+
+    //   // popupContainer.style.display = "none";
+    //   // popupForm.style.display = "none";
+
+    //   // console.log("Name: " + name);
+    //   // console.log("Email: " + Number);
+    //   // console.log("Category: " + category);
+    //   // console.log("Message: " + message);
+    //   document.getElementById("myFormContent").addEventListener("submit", function (event) {
+    //     event.preventDefault();
+
+    //     // Clear form fields
+    //     document.getElementById("name").value = " ";
+    //     document.getElementById("Number").value = " ";
+    //     document.getElementById("category").selectedIndex = 0;
+    //     document.getElementById("message").value = " ";
+
+    //     // document.getElemenById("myFormContent").reset();
+
+    //     // Hide the form
+    //     popupContainer.style.display = "none";
+    //     popupForm.style.display = "none";
+
+    //     // Rest of your code...
+    //   });
+    // ==============================================================================================================
+
+
+    window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+
+    const openFormButton = document.getElementById("openFormButton");
+    const popupContainer = document.getElementById("popupContainer");
+    const popupForm = document.getElementById("popupForm");
+    const cancelButton = document.getElementById("cancelButton");
+    const form = document.getElementById("myForm");
+    const contact = document.getElementById("contact");
+
+    openFormButton.addEventListener("click", function () {
+      popupContainer.style.display = "flex";
+      popupForm.style.display = "block";
+    });
+    window.addEventListener('load', function () {
+      document.getElementById("myFormContent").reset();
+    });
+    cancelButton.addEventListener("click", function () {
+      popupContainer.style.display = "none";
+      popupForm.style.display = "none";
+      form.reset(); // Reset the form fields
+    });
+    // window.onload = function () {
+    //   document.getElementById("contact").reset();
+    // };
+
+
+    window.addEventListener('load', function () {
+      document.getElementb("contact").reset();
+    });
+    // $(function () {
+    //   $(".zipcode-number").on("keyup", function (e) {
+    //     var $field = $(this),
+    //       val = this.value,
+    //       $thisIndex = parseInt($field.data("idx"), 10);
+    //     if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid")) {
+    //       this.value = inputQuantity[$thisIndex];
+    //       return;
+    //     }
+    //     if (val.length > Number($field.attr("maxlength"))) {
+    //       val = val.slice(0, 5);
+    //       $field.val(val);
+    //     }
+    //     inputQuantity[$thisIndex] = val;
+    //   });
+    // });
+
+    // ==============================================================================================================
+
+    //   formbutton("create", {
+    //     action: "https://formspree.io/f/mqkojpkz",
+    //     title: "How can we help?",
+    //     fields: [
+    //       {
+    //         type: "Text",
+    //         label: "Username :",
+    //         name: "Name",
+    //         required: true,
+    //         placeholder: "John Deo"
+    //       },
+    //       {
+    //         type: "Number",
+    //         label: "Email:",
+    //         name: "Number",
+    //         required: true,
+    //         placeholder: "your@Number.com"
+    //       },
+    //       {
+    //         type: "Dropdown",
+    //         label: "Category",
+    //         name: "category",
+    //         required: true,
+    //         // placeholder: ""
+    //       },
+    //       {
+    //         type: "textarea",
+    //         label: "message:",
+    //         name: "message",
+    //         placeholder: "What's on your mind?",
+    //       },
+    //       { type: "submit" }
+    //     ],
+    //   });
+    // });
+
+    let outline = document.querySelector('.outline');
+    let cursor = document.querySelector('.cursor');
+    let a = document.querySelectorAll('a');
+
+
+    document.addEventListener('mousemove', function (e) {
+      let x = e.clientX;
+      let y = e.clientY;
+      outline.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
+      cursor.style.transform = `translate( calc(${x}px - 50%) , calc(${y}px - 50%) )`;
+    });
+
+
+    a.forEach((item) => {
+      item.addEventListener('mouseover', () => {
+        outline.classList.add('hover');
+        cursor.classList.add('hover');
+      });
+      item.addEventListener('mouseleave', () => {
+        outline.classList.remove('hover');
+        cursor.classList.remove('hover');
+
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>
